@@ -35,19 +35,6 @@ service.playlistItems.list({
   }).catch(err => console.error(err))
 })
 
-// service.playlists.list({
-//   auth: auth,
-//   id: config.ggUploadChannel,
-//   part: 'snippet,contentDetails'
-// }, (err, res) => {
-//   if (err) {
-//     console.error(err)
-//     return
-//   }
-
-//   console.log(res.data.items[0])
-// })
-
 const getVideos = async (playlistId, pageToken) => {
   let videoIds = []
   let pageNum = 0
@@ -73,3 +60,27 @@ const getVideos = async (playlistId, pageToken) => {
 
   return videoIds
 }
+
+const getChannelId = async channelName => {
+  let response = await service.channels.list({
+    auth: auth,
+    part: 'id',
+    forUsername: channelName
+  })
+
+  return response.data.items[0].id
+}
+
+// const getPlaylistId = async playlistName => {
+//   let response = await service.playlists.list({
+//     auth: auth,
+//     channelId: await getChannelId('GameGrumps'),
+//     part: 'snippet,contentDetails'
+//   })
+
+//   for (let x = 0; x < response.data.items.length; x++) {
+//     let item = response.data.items[x]
+//     console.log(item)
+//     if (item.snippet.title === playlistName) return item.id
+//   }
+// }
