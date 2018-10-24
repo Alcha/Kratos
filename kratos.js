@@ -4,23 +4,6 @@ const { google } = require('googleapis')
 let auth = config.youtubeKey
 
 const service = google.youtube('v3')
-// service.channels.list({
-//   auth: auth,
-//   part: 'snippet,contentDetails,statistics',
-//   forUsername: 'GameGrumps'
-// }, (err, res) => {
-//   if (err) {
-//     console.log(err)
-//     return
-//   }
-
-//   let channels = res.data.items
-//   if (channels.length === 0) console.log(`No channels found.`)
-//   else {
-//     console.log(`This channel ID is ${channels[0].id}`)
-//     console.log(channels[0].contentDetails.relatedPlaylists)
-//   }
-// })
 
 const fs = require('fs')
 const path = require('path')
