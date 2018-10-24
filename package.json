@@ -4,7 +4,8 @@
   "description": "Manages downloading videos from the GameGrumps channel.",
   "main": "kratos.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node ./kratos.js"
   },
   "author": {
     "email": "alcha@hasslefree.solutions",
