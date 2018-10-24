@@ -1,0 +1,19 @@
+{
+  "name": "kratos",
+  "version": "1.0.0",
+  "description": "Manages downloading videos from the GameGrumps channel.",
+  "main": "kratos.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": {
+    "email": "alcha@hasslefree.solutions",
+    "name": "Devin W. Leaman (Alcha)",
+    "url": "https://alcha.org"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "google-auth-library": "^2.0.0",
+    "googleapis": "^34.0.0"
+  }
+}
