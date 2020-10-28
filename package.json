@@ -15,6 +15,6 @@
   "license": "MIT",
   "dependencies": {
     "google-auth-library": "^2.0.0",
-    "googleapis": "^34.0.0"
+    "googleapis": "^62.0.0"
   }
 }
